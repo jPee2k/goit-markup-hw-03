@@ -10,6 +10,8 @@
   --team-bg-color: #F5F4FA;
   --card-color: #FFFFFF;
   --card-border-color: #EEEEEE;
+  --disabled-button-text-color: rgba(255, 255, 255, 0.3);
+  --disabled-button-color: rgba(33, 150, 243, 0.3);
 }
 
 *, *::before, *::after {
@@ -54,6 +56,8 @@
 /* --- header --- */
 
 .header {
+  padding-top: 26px;
+  padding-bottom: 23px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -61,8 +65,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
-  min-height: 79px;
+  row-gap: 15px;
 }
 
 .logo {
@@ -97,8 +100,8 @@
 
 .navigation__link {
   display: inline-block;
-  padding-top: 8px;
-  padding-bottom: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 
   letter-spacing: 0.02em;
   font-weight: 500;
@@ -127,8 +130,8 @@
 
 .contacts__link {
   display: inline-block;
-  padding-top: 8px;
-  padding-bottom: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
 
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -142,10 +145,11 @@
 }
 
 
-/* --- main --- */
+/* --- section --- */
 
-.main > *:not(:last-child) {
-  margin-bottom: 94px;
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 
@@ -173,6 +177,7 @@
   color: var(--title-color);
 
   margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .button {
@@ -200,8 +205,8 @@
 
 .button:disabled {
   cursor: default;
-  color: rgba(255, 255, 255, 0.3);
-  background-color: rgba(33, 150, 243, 0.3);
+  color: var(--disabled-button-text-color);
+  background-color: var(--disabled-button-color);
 }
 
 
@@ -242,13 +247,19 @@
 
 /* --- services --- */
 
+.services {
+  padding-top: 0;
+}
+
 .services__title {
-  margin-bottom: 50px;
   text-align: center;
 
   font-weight: 700;
   font-size: 36px;
   letter-spacing: 0.03em;
+
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .services__list {
@@ -271,7 +282,6 @@
 /* --- team --- */
 
 .team {
-  padding: 94px 0;
   background-color: var(--team-bg-color);
 }
 
@@ -328,22 +338,15 @@
 /* --- footer --- */
 
 .footer {
-  background-color: var(--bg-color);
-}
-
-.footer__container {
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: var(--bg-color);
 }
 
 .footer__logo {
   line-height: 1.2;
   margin-bottom: 20px;
   color: var(--title-color);
-}
-
-.address {
-  width: 231px;
 }
 
 .address__list {
@@ -374,12 +377,7 @@
 
 /* --- portfolio --- */
 
-.portfolio__container {
-  margin-top: 94px;
-  margin-bottom: 94px;
-}
-
-.portfolio__container > *:not(:last-child) {
+.portfolio .section > *:not(:last-child) {
   margin-bottom: 50px;
 }
 
