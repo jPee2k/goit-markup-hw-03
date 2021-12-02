@@ -56,8 +56,8 @@
 /* --- header --- */
 
 .header {
-  padding-top: 26px;
-  padding-bottom: 23px;
+  padding-top: 24px;
+  padding-bottom: 25px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -156,18 +156,23 @@
 /* --- intro --- */
 
 .intro {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  min-height: 600px;
+  text-align: center;
   background-color: var(--bg-color);
+}
+
+.intro > *:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.intro.section {
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .intro__title {
   width: 696px;
   text-align: center;
+  margin: 0 auto;
 
   font-size: 44px;
   line-height: 1.363;
@@ -175,9 +180,6 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--title-color);
-
-  margin-top: 0;
-  margin-bottom: 30px;
 }
 
 .button {
@@ -211,6 +213,10 @@
 
 
 /* --- advantages --- */
+
+.advantages.section {
+  padding-bottom: calc(94px / 2);
+}
 
 .advantages__list {
   display: grid;
@@ -246,6 +252,10 @@
 
 
 /* --- services --- */
+
+.services.section {
+  padding-top: calc(94px / 2);
+}
 
 .services {
   padding-top: 0;
@@ -377,7 +387,7 @@
 
 /* --- portfolio --- */
 
-.portfolio .section > *:not(:last-child) {
+.portfolio__container > *:not(:last-child) {
   margin-bottom: 50px;
 }
 
@@ -434,6 +444,8 @@
 
 .catalog .card__img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .catalog .card__wrapper {
